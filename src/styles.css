@@ -151,6 +151,10 @@ h1 {
   font-size: 1.25rem;
 }
 
+.guess-input-field {
+  text-transform:uppercase;
+}
+
 .guess-input-wrapper input {
   display: block;
   width: 100%;
