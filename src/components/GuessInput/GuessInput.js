@@ -1,16 +1,12 @@
 import React from "react";
 
-function GuessInput({ handleSubmitGuess }) {
+function GuessInput({ handleSubmitGuess, status }) {
   const [guess, setGuess] = React.useState('');
-  const [displayInput, setDisplayInput] = React.useState(true);
 
   function submitGuess(event) {
     event.preventDefault();
 
-    const finished = handleSubmitGuess(guess.toUpperCase());
-    if (finished) {
-      setDisplayInput(false);
-    }
+    handleSubmitGuess(guess.toUpperCase());
     
     // clear input field
     setGuess('');
@@ -20,7 +16,7 @@ function GuessInput({ handleSubmitGuess }) {
     <form className="guess-input-wrapper" onSubmit={submitGuess}>
         <label htmlFor="guess-input">Enter guess:</label>
         <input required
-               disabled={!displayInput}
+               disabled={status !== undefined}
                // style={displayInput ? undefined : {display: 'none'}}
                id="guess-input"
                type="text"
