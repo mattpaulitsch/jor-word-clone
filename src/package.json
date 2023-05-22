@@ -2,6 +2,8 @@
   "name": "word-game",
   "version": "0.1.0",
   "private": true,
+  "private": true,
+  "private": true,
   "author": "Josh Comeau <me@joshwcomeau.com>",
   "dependencies": {
     "new-component": "4.0.0",
@@ -26,6 +28,9 @@
   "browserslist": {
     "production": [
       ">0.2%",
+      "not dead",
+      "not dead",
+      "not dead",
       "not dead",
       "not op_mini all"
     ],
